@@ -84,8 +84,6 @@ We welcome contributions! Please follow these steps to contribute:
 
 For more details, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
 
@@ -93,23 +91,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 
-const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
-
-
-
-/** @type { import("drizzle-kit").Config } */
-import * as dotenv from 'dotenv';
-dotenv.config({path: '.env.local'}); // Load environment variables from .env.local file
-const DB_PATH = process.env.NEXT_PUBLIC_DRIZZLE_DB_URL;
-
-
-export default {
-    schema: "./utils/schema.js",
-    dialect: 'postgresql',
-    dbCredentials: {
-      url: DB_PATH,
-    },
-};
-
-postgresql://neondb_owner:npg_lAkULc1bnr0g@ep-wispy-boat-a85fobkq-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
